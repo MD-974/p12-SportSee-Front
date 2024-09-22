@@ -1,5 +1,6 @@
 import Sidebar from "/src/components/Sidebar/Sidebar.jsx"
 import Navbar from "/src/components/Navbar/Navbar.jsx"
+import BarchartDiagram from "./components/BarchartDiagram/BarchartDiagram"
 import "./App.scss"
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                 <p>poids(kg)</p>
                 <p className="kcal">calories(kCal)</p>
               </div>
+              <BarchartDiagram />
             </div>
           </div>
         </section>
