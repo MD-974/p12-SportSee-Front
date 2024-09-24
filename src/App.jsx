@@ -21,11 +21,7 @@ function App() {
           </div>
           <div className="progress-container">
             <div className="progress">
-              <div className="progress-graph">
-                <p>activités</p>
-                <p>poids(kg)</p>
-                <p className="kcal">calories(kCal)</p>
-              </div>
+              <h3>Activité quotidienne</h3>
               <BarchartDiagram />
             </div>
           </div>
