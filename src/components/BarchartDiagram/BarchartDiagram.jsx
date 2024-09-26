@@ -194,15 +194,24 @@ export default function BarchartDiagram() {
             horizontal={true}
             stroke="#D9D9D9"
           />
+
           <XAxis dataKey="day" tickLine={false} />
+
           <YAxis
             type="number"
             orientation="right"
+            domain={["dataMin - 2", "dataMax + 2"]}
+            yAxisId="kilogram"
             tickCount={3}
             tickLine={false}
             axisLine={false}
+            tickMargin={30}
           />
+
+          <YAxis hide yAxisId="calories" />
+
           <Tooltip />
+
           <Legend
             iconType="circle"
             iconSize={10}
@@ -210,18 +219,21 @@ export default function BarchartDiagram() {
             layout="horizontal"
             align="right"
           />
+
           <Bar
-            dataKey="kilogram"
-            fill="#282D30"
-            unit="kg"
             name="poids (kg)"
-            // yAxisId="kilogram"
+            dataKey="kilogram"
+            yAxisId="kilogram"
+            unit="kg"
+            fill="#282D30"
             radius={[3, 3, 0, 0]}
             barSize={7}
           />
+
           <Bar
             name="Calories brûlées (kCal)"
             dataKey="calories"
+            yAxisId="calories"
             unit="kCal"
             fill="#E60000"
             radius={[3, 3, 0, 0]}
