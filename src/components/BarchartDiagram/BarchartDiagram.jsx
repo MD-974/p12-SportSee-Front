@@ -123,6 +123,7 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
+  // ReferenceLine,
 } from "recharts"
 
 const data = [
@@ -162,6 +163,11 @@ const data = [
     calories: 390,
   },
 ]
+
+// Calcul des poids minimum, maximum et milieu
+// const poidsMin = Math.min(...data.map((item) => item.kilogram))
+// const poidsMax = Math.max(...data.map((item) => item.kilogram))
+// const poidsMilieu = (poidsMin + poidsMax) / 2
 
 export default function BarchartDiagram() {
   return (
@@ -219,7 +225,28 @@ export default function BarchartDiagram() {
             layout="horizontal"
             align="right"
           />
+          {/* Ajouter les lignes horizontales */}
+          {/* <ReferenceLine
+            y={poidsMin - 1}
+            label="Poids min - 1"
 
+            strokeDasharray="3 3"
+            yAxisId="kilogram"
+          />
+          <ReferenceLine
+            y={poidsMax + 1}
+            label="Poids max + 1"
+
+            strokeDasharray="3 3"
+            yAxisId="kilogram"
+          />
+          <ReferenceLine
+            y={poidsMilieu}
+            label="Poids milieu"
+
+            strokeDasharray="3 3"
+            yAxisId="kilogram"
+          /> */}
           <Bar
             name="poids (kg)"
             dataKey="kilogram"
