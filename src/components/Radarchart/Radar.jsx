@@ -19,6 +19,7 @@ const data = [
 export default function RadarChartDiagram() {
   return (
     <div
+      className="radar"
       style={{
         width: "350px",
         height: "300px",
