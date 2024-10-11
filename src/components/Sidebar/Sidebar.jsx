@@ -6,16 +6,32 @@ function Sidebar() {
       <nav>
         <ul>
           <li>
-            <img src="src/assets/Sidebar/yoga.svg" alt="Yoga" />
+            <img
+              className="sidebar-logo"
+              src="src/assets/Sidebar/yoga.svg"
+              alt="Yoga"
+            />
           </li>
           <li>
-            <img src="/src/assets/Sidebar/swim.svg" alt="Natation" />
+            <img
+              className="sidebar-logo"
+              src="/src/assets/Sidebar/swim.svg"
+              alt="Natation"
+            />
           </li>
           <li>
-            <img src="/src/assets/Sidebar/bike.svg" alt="Cyclisme" />
+            <img
+              className="sidebar-logo"
+              src="/src/assets/Sidebar/bike.svg"
+              alt="Cyclisme"
+            />
           </li>
           <li>
-            <img src="/src/assets/Sidebar/weight.svg" alt="Musculation" />
+            <img
+              className="sidebar-logo"
+              src="/src/assets/Sidebar/weight.svg"
+              alt="Musculation"
+            />
           </li>
         </ul>
       </nav>

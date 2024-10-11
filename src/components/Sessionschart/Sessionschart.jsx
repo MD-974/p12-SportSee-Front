@@ -22,18 +22,7 @@ const data = [
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length > 0 && payload[0].value != null) {
     return (
-      <div
-        className="custom-tooltip"
-        // style={{
-        //   backgroundColor: "#fff",
-        //   border: "1px solid #ccc",
-        //   color: "#000000",
-        //   width: "60px",
-        //   height: "40px",
-        //   padding: "5px",
-        //   textAlign: "center",
-        // }}
-      >
+      <div className="custom-tooltip">
         <p>{`${payload[0].value} min`}</p>
       </div>
     )
@@ -47,11 +36,11 @@ export default function SessionDurationChart() {
     <div
       className="sessions"
       style={{
-        width: "300px",
-        height: "300px",
+        width: "258px",
+        height: "263px",
         backgroundColor: "#FF0000",
         padding: "20px",
-        borderRadius: "10px",
+        borderRadius: "5px",
         position: "relative",
         color: "#FFFFFF",
       }}

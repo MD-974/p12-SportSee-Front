@@ -11,13 +11,14 @@ const Objectif = () => {
   return (
     <div
       className="objectif"
-      style={{ width: "258px", height: "263px", backgroundColor: "beige" }}
+      style={{
+        width: "258px",
+        height: "263px",
+        backgroundColor: "beige",
+        borderRadius: "5px",
+      }}
     >
-      <ResponsiveContainer
-        width="100%"
-        height="100%"
-        // style={{ backgroundColor: "beige" }}
-      >
+      <ResponsiveContainer width="100%" height="100%">
         {/* Graphique circulaire */}
         <PieChart>
           <text

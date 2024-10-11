@@ -1,20 +1,13 @@
 .sidebar {
     width: 117px;
-    height: 1024px;
+    // height: 780px;
+    height: 100%;
     background-color: #020203;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 20px 0;
-}
-.logo {
-    width: 178px;
-    height: 60.93px;
-}
-
-.logo img {
-    margin-left: 50px;
+    padding: 128px 0;
 }
   
 .sidebar nav ul {
@@ -25,7 +18,10 @@
 .sidebar nav ul li {
     margin: 20px 0;
 }
-   
+.sidebar-logo {
+    width: 64px;
+    height: 64px;
+} 
 .sidebar footer {
     writing-mode: vertical-rl;
     transform: rotate(180deg);

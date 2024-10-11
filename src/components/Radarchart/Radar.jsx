@@ -21,8 +21,9 @@ export default function RadarChartDiagram() {
     <div
       className="radar"
       style={{
-        width: "350px",
-        height: "300px",
+        width: "100%",
+        maxWidth: "258px",
+        height: "263px",
         backgroundColor: "#2A2A2A",
         padding: "20px",
         borderRadius: "5px",
@@ -34,7 +35,6 @@ export default function RadarChartDiagram() {
           <PolarGrid />
           <PolarAngleAxis
             dataKey="subject"
-            // stroke="#FFFFFF"
             tick={{ fill: "#FFFFFF", fontSize: 12 }}
           />
           <Radar

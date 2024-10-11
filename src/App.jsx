@@ -1,6 +1,7 @@
 import Sidebar from "/src/components/Sidebar/Sidebar.jsx"
 import Navbar from "/src/components/Navbar/Navbar.jsx"
 import BarchartDiagram from "./components/BarchartDiagram/BarchartDiagram"
+// import ActivityChart from "./components/BarchartDiagram/BarchartDiagram"
 import Sessionschart from "./components/Sessionschart/Sessionschart"
 import Objectif from "./components/Objectif/Objectif"
 import "./App.scss"
@@ -16,7 +17,7 @@ function App() {
         <section>
           <div className="title-container">
             <h1 className="title">
-              Bonjour <span className="name">{name}</span>
+              Bonjour <span className="name-user">{name}</span>
             </h1>
             <p className="subtitle">
               Félicitation ! Vous avez explosé vos objectifs hier 👏
@@ -26,8 +27,8 @@ function App() {
             <div className="diagrams-container">
               <div className="progress-container">
                 <div className="progress">
-                  {/* <h3>Activité quotidienne</h3> */}
                   <BarchartDiagram />
+                  {/* <ActivityChart /> */}
                 </div>
                 <div className="graph-container">
                   <div className="sessions-container">
@@ -42,9 +43,39 @@ function App() {
                 </div>
               </div>
               <div className="info-container">
-                <h3>Informations</h3>
-                <p>Vous avez fait 3 séances cette semaine.</p>
-                <p>Vous avez consommé 2000 calories cette semaine.</p>
+                <div className="info-calories">
+                  <div className="picture">
+                    <img src="./src/assets/Dashboard/fire.svg" alt="" />
+                    <div className="info">
+                      <p>Calories</p>
+                      <p>2000 kCal</p>
+                    </div>
+                  </div>
+
+                  <div className="picture">
+                    <img src="./src/assets/Dashboard/chicken.svg" alt="" />
+                    <div className="info">
+                      <p>Protéines</p>
+                      <p>155 g</p>
+                    </div>
+                  </div>
+
+                  <div className="picture">
+                    <img src="./src/assets/Dashboard/apple.svg" alt="" />
+                    <div className="info">
+                      <p>Glucides</p>
+                      <p>290 g</p>
+                    </div>
+                  </div>
+
+                  <div className="picture">
+                    <img src="./src/assets/Dashboard/burger.svg" alt="" />
+                    <div className="info">
+                      <p>Lipides</p>
+                      <p>50 g</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
