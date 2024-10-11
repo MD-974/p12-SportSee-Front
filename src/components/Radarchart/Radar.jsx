@@ -34,7 +34,7 @@ export default function RadarChartDiagram() {
           <PolarGrid />
           <PolarAngleAxis
             dataKey="subject"
-            stroke="#FFFFFF"
+            // stroke="#FFFFFF"
             tick={{ fill: "#FFFFFF", fontSize: 12 }}
           />
           <Radar
