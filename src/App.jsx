@@ -1,7 +1,6 @@
 import Sidebar from "/src/components/Sidebar/Sidebar.jsx"
 import Navbar from "/src/components/Navbar/Navbar.jsx"
 import BarchartDiagram from "./components/BarchartDiagram/BarchartDiagram"
-// import ActivityChart from "./components/BarchartDiagram/BarchartDiagram"
 import Sessionschart from "./components/Sessionschart/Sessionschart"
 import Objectif from "./components/Objectif/Objectif"
 import "./App.scss"
@@ -28,7 +27,6 @@ function App() {
               <div className="progress-container">
                 <div className="progress">
                   <BarchartDiagram />
-                  {/* <ActivityChart /> */}
                 </div>
                 <div className="graph-container">
                   <div className="sessions-container">

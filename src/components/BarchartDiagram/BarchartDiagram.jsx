@@ -67,7 +67,8 @@ export default function BarchartDiagram() {
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={data}
-          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+          margin={{ top: 20, right: 60, left: 20, bottom: 5 }}
+          barCategoryGap="10%"
         >
           <text
             x={0}
@@ -82,12 +83,7 @@ export default function BarchartDiagram() {
             Activité quotidienne
           </text>
 
-          <CartesianGrid
-            strokeDasharray="3 3"
-            opacity={0.5}
-            vertical={false}
-            // stroke="#D9D9D9"
-          />
+          <CartesianGrid strokeDasharray="3 3" opacity={0.5} vertical={false} />
 
           <XAxis
             dataKey="day"
@@ -95,8 +91,9 @@ export default function BarchartDiagram() {
             axisLine={{ stroke: "#DEDEDE" }}
             tick={{ stroke: "#9B9EAC" }}
             dy={10}
+            // pour avoir les bars en debut et fin de l'axe(mais enleve le hoover)
             // scale={"point"}
-            // padding={{ left: 20, right: 20 }}
+            padding={{ left: -50, right: -50 }}
           />
 
           <YAxis
@@ -108,7 +105,7 @@ export default function BarchartDiagram() {
             tick={{ stroke: "#9B9EAC" }}
             tickLine={false}
             axisLine={false}
-            tickMargin={30}
+            tickMargin={60} // espace entre fin graph et nombre sur la droite
           />
 
           <YAxis hide yAxisId="calories" />
@@ -116,15 +113,14 @@ export default function BarchartDiagram() {
           {/* Utilisation du tooltip personnalisé */}
           <Tooltip content={<CustomTooltip />} />
 
-          {/* <Tooltip /> */}
-
           <Legend
             iconType="circle"
             iconSize={10}
             verticalAlign="top"
             layout="horizontal"
             align="right"
-            wrapperStyle={{ top: 5 }}
+            // decalage sur le haut et la droite des infos legend (poids/calories)
+            wrapperStyle={{ top: 5, marginLeft: "55px" }}
             formatter={(value) => {
               if (value === "Calories brûlées (kCal)") {
                 return <span style={{ color: "#000000" }}>{value}</span>

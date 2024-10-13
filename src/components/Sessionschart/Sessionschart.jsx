@@ -6,7 +6,7 @@ import {
   XAxis,
   Tooltip,
   ResponsiveContainer,
-  // Rectangle,
+  Rectangle,
 } from "recharts"
 
 const data = [
@@ -18,7 +18,23 @@ const data = [
   { day: "s", duration: 60 },
   { day: "d", duration: 80 },
 ]
-
+const CustomizedCursor = ({ pointerEvents, height, points, className }) => {
+  const { x } = points[0]
+  return (
+    <Rectangle
+      x={x}
+      y={0}
+      fill="#000"
+      fillOpacity="10%"
+      pointerEvents={pointerEvents}
+      width={500}
+      height={height}
+      points={points}
+      className={className}
+      type="linear"
+    />
+  )
+}
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length > 0 && payload[0].value != null) {
     return (
@@ -45,9 +61,14 @@ export default function SessionDurationChart() {
         color: "#FFFFFF",
       }}
     >
-      <h3 style={{ margin: 0, paddingBottom: "10px", opacity: "50%" }}>
-        Durée moyenne des sessions
-      </h3>
+      <div className="sessions-title-container">
+        <h3
+          className="sessions-title"
+          style={{ margin: 0, paddingBottom: "10px", opacity: "50%" }}
+        >
+          Durée moyenne des sessions
+        </h3>
+      </div>
       <ResponsiveContainer width="100%" height="80%">
         <LineChart data={data}>
           <XAxis
@@ -80,12 +101,12 @@ export default function SessionDurationChart() {
           />
           <Tooltip
             content={<CustomTooltip />}
-            cursor={{
-              stroke: "#000000",
-              strokeOpacity: "10%",
-              strokeWidth: "20px",
-              height: "auto",
-            }}
+            // cursor={{
+            //   stroke: "#000000",
+            //   strokeOpacity: "10%",
+            //   strokeWidth: "20%",
+            // }}
+            cursor={<CustomizedCursor />}
           />
         </LineChart>
       </ResponsiveContainer>
