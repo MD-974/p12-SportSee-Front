@@ -83,7 +83,7 @@ export default function SessionDurationChart() {
             cursor={{
               stroke: "#000000",
               strokeOpacity: "10%",
-              strokeWidth: "20%",
+              strokeWidth: "20px",
               height: "auto",
             }}
           />

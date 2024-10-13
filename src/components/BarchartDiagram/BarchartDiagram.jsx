@@ -67,7 +67,7 @@ export default function BarchartDiagram() {
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={data}
-          margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
         >
           <text
             x={0}
@@ -124,7 +124,7 @@ export default function BarchartDiagram() {
             verticalAlign="top"
             layout="horizontal"
             align="right"
-            // wrapperStyle={{ marginBottom: 20 }}
+            wrapperStyle={{ top: 5 }}
             formatter={(value) => {
               if (value === "Calories brûlées (kCal)") {
                 return <span style={{ color: "#000000" }}>{value}</span>
@@ -157,28 +157,3 @@ export default function BarchartDiagram() {
     </div>
   )
 }
-// const data = [
-//   { day: "1", poids: 72, calories: 2200 },
-//   { day: "2", poids: 73, calories: 2300 },
-//   { day: "3", poids: 74, calories: 2400 },
-//   { day: "4", poids: 75, calories: 2500 },
-//   { day: "5", poids: 76, calories: 2600 },
-//   { day: "6", poids: 77, calories: 2700 },
-//   { day: "7", poids: 78, calories: 2800 },
-// ]
-
-// function ActivityChart() {
-//   return (
-//     <BarChart width={500} height={300} data={data}>
-//       <CartesianGrid strokeDasharray="3 3" />
-//       <XAxis dataKey="day" />
-//       <YAxis />
-//       <Tooltip />
-//       <Legend />
-//       <Bar dataKey="poids" fill="#000" />
-//       <Bar dataKey="calories" fill="#FF0000" />
-//     </BarChart>
-//   )
-// }
-
-// export default ActivityChart

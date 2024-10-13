@@ -41,7 +41,7 @@ const Objectif = () => {
             startAngle={-270} // Angle de départ (semi-circulaire)
             endAngle={90} // Angle de fin (semi-circulaire)
             innerRadius="60%" // Rayon interne (cercle creux)
-            outerRadius="80%" // Rayon externe
+            outerRadius="70%" // Rayon externe
             cornerRadius={20} // Arrondir les coins pour les sections
           ></Pie>
         </PieChart>
