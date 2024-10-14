@@ -67,7 +67,7 @@ export default function BarchartDiagram() {
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={data}
-          margin={{ top: 20, right: 60, left: 20, bottom: 5 }}
+          margin={{ top: 30, right: 60, left: 20, bottom: 5 }}
           barCategoryGap="10%"
         >
           <text
@@ -75,7 +75,7 @@ export default function BarchartDiagram() {
             y={20}
             textAnchor="left"
             style={{
-              fontSize: "14px",
+              fontSize: "15px",
               fontWeight: 500,
               fill: "#20253A",
             }}
@@ -113,7 +113,7 @@ export default function BarchartDiagram() {
           {/* Utilisation du tooltip personnalisé */}
           <Tooltip content={<CustomTooltip />} />
 
-          <Legend
+          {/* <Legend
             iconType="circle"
             iconSize={10}
             verticalAlign="top"
@@ -121,12 +121,39 @@ export default function BarchartDiagram() {
             align="right"
             // decalage sur le haut et la droite des infos legend (poids/calories)
             wrapperStyle={{ top: 5, marginLeft: "55px" }}
+            // On modifie la couleur du texte pour legend
             formatter={(value) => {
+              if (value === "poids (kg)") {
+                return <span style={{ color: "#74798C" }}>{value}</span>
+              }
               if (value === "Calories brûlées (kCal)") {
-                return <span style={{ color: "#000000" }}>{value}</span>
+                return <span style={{ color: "#74798C" }}>{value}</span>
               }
               return <span>{value}</span>
             }}
+          /> */}
+          <Legend
+            iconType="circle"
+            iconSize={10}
+            verticalAlign="top"
+            layout="horizontal"
+            // align="right"
+            // decalage sur le haut et la droite des infos legend (poids/calories)
+            wrapperStyle={{ top: 5, marginLeft: "176px" }}
+            formatter={(value) => (
+              <span
+                // On modifie la couleur du texte pour legend
+                style={{
+                  color: ["poids (kg)", "Calories brûlées (kCal)"].includes(
+                    value
+                  )
+                    ? "#74798C"
+                    : "#000",
+                }}
+              >
+                {value}
+              </span>
+            )}
           />
 
           <Bar

@@ -21,8 +21,8 @@ export default function RadarChartDiagram() {
     <div
       className="radar"
       style={{
-        width: "258px",
-        height: "263px",
+        width: "200px",
+        height: "205px",
         backgroundColor: "#2A2A2A",
         padding: "2px",
         borderRadius: "5px",

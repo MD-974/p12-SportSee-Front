@@ -2,6 +2,7 @@
   font-size: 48px;
   font-weight: 500;
   margin: 0;
+  
 }
 .name-user {
   color: red;
@@ -22,7 +23,7 @@ section {
 .diagrams-container{ 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  // justify-content: space-between;
   
 }
 
@@ -32,26 +33,32 @@ section {
 }
 
 
-.progress-graph {
-justify-content: space-between;
-padding: 20px 30px;
+// .progress-graph {
+// justify-content: space-between;
+// padding: 20px 30px;
+// }
+
+.progress-container {
+  width: 70%;
 }
 
 .graph-container {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 30px 0 80px 0;
 }
 
 .picture {
   display: flex;
 }
 .info-container {
+  width: 30%;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  // padding: 20px;
+  gap: 40px;
 }
-.info-calori
+
 .info {
   display: flex;
   flex-direction: column;

@@ -12,8 +12,8 @@ const Objectif = () => {
     <div
       className="objectif"
       style={{
-        width: "258px",
-        height: "263px",
+        width: "200px",
+        height: "100%",
         backgroundColor: "beige",
         borderRadius: "5px",
       }}
