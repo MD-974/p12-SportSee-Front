@@ -51,18 +51,33 @@ const CustomTooltip = ({ active, payload }) => {
   return null // Retourne null si le tooltip n'est pas actif
 }
 
+const barsData = [
+  {
+    name: "poids (kg)",
+    dataKey: "kilogram",
+    yAxisId: "kilogram",
+    fill: "#282D30",
+  },
+  {
+    name: "Calories brûlées (kCal)",
+    dataKey: "calories",
+    yAxisId: "calories",
+    fill: "#E60000",
+  },
+]
+
 export default function BarchartDiagram() {
   return (
     <div
       className="BarchartDiagram-container"
-      style={{
-        background: "#fbfbfb",
-        color: "#FFFFFF",
-        padding: "10px",
-        textAlign: "center",
-        fontSize: "14px",
-        fontWeight: "500",
-      }}
+      // style={{
+      //   background: "#fbfbfb",
+      //   color: "#FFFFFF",
+      //   padding: "20px 0 20px 30px",
+      //   textAlign: "center",
+      //   fontSize: "14px",
+      //   fontWeight: "500",
+      // }}
     >
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
@@ -156,7 +171,7 @@ export default function BarchartDiagram() {
             )}
           />
 
-          <Bar
+          {/* <Bar
             name="poids (kg)"
             dataKey="kilogram"
             yAxisId="kilogram"
@@ -174,7 +189,19 @@ export default function BarchartDiagram() {
             fill="#E60000"
             radius={[3, 3, 0, 0]}
             barSize={7}
-          />
+          /> */}
+          {barsData.map((bar) => (
+            <Bar
+              key={bar.dataKey}
+              name={bar.name}
+              dataKey={bar.dataKey}
+              yAxisId={bar.yAxisId}
+              unit={bar.dataKey === "kilogram" ? "kg" : "kCal"}
+              fill={bar.fill}
+              radius={[3, 3, 0, 0]}
+              barSize={7}
+            />
+          ))}
         </BarChart>
       </ResponsiveContainer>
     </div>

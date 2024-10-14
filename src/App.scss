@@ -1,65 +1,155 @@
-.title {
-  font-size: 48px;
+// .title {
+//   font-size: 48px;
+//   font-weight: 500;
+//   margin: 0;
+  
+// }
+// .name-user {
+//   color: red;
+// }
+
+// .subtitle {
+//   font-size: 18px;
+//   font-weight: 500;
+//   margin: 20px 0 50px 0;
+// }
+
+// section {
+//   // background-color: cyan;
+//   width: 94%;
+//   padding: 40px 20px 0 40px;
+// }
+
+// .diagrams-container{ 
+//   display: flex; 
+// }
+
+// .main-container {
+//   display: flex;
+//   width: 1024px;
+// }
+
+// .progress-container {
+//   width: 70%;
+// }
+
+// .graph-container {
+//   display: flex;
+//   justify-content: space-between;
+//   padding: 30px 0 80px 0;
+// }
+
+// .picture {
+//   display: flex;
+// }
+// .info-container {
+//   width: 30%;
+//   display: flex;
+// justify-content: center;
+// }
+// .info-calories {
+//   display: flex;
+//   flex-direction: column;
+// }
+// .picture {
+//   width: 258px;
+//   height: 124px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: #FBFBFB;
+//   margin-bottom: 20px;
+// }
+
+// .info {
+//   display: flex;
+//   flex-direction: column;
+//   margin: 15px 0 0 20px;
+//   p {
+//     margin: 0;
+//   }
+//   .info-value {
+//     font-size: 20px;
+//     font-weight: 700;
+//   }
+//   .info-text {
+//     font-size: 14px;
+//     color: #74798c;
+//   }
+// }
+.title, .subtitle {
   font-weight: 500;
   margin: 0;
-  
 }
+
+.title {
+  font-size: 48px;
+}
+
 .name-user {
   color: red;
 }
 
 .subtitle {
   font-size: 18px;
-  font-weight: 500;
-  margin: 20px 0 50px 0;
+  margin: 20px 0 50px;
 }
 
 section {
-  background-color: cyan;
   width: 94%;
-  padding: 10px 20px;
+  padding: 40px 20px 0 40px;
 }
 
-.diagrams-container{ 
+.diagrams-container, .main-container, .graph-container, .picture {
   display: flex;
-  flex-direction: row;
-  // justify-content: space-between;
-  
 }
 
 .main-container {
-  display: flex;
   width: 1024px;
 }
-
-
-// .progress-graph {
-// justify-content: space-between;
-// padding: 20px 30px;
-// }
 
 .progress-container {
   width: 70%;
 }
 
 .graph-container {
-  display: flex;
   justify-content: space-between;
-  padding: 30px 0 80px 0;
+  padding: 30px 0 80px;
+}
+
+.info-container {
+  width: 30%;
+  justify-content: center;
+}
+
+.info-calories {
+  flex-direction: column;
 }
 
 .picture {
-  display: flex;
-}
-.info-container {
-  width: 30%;
-  display: flex;
-  justify-content: space-between;
-  // padding: 20px;
-  gap: 40px;
+  width: 258px;
+  height: 124px;
+  align-items: center;
+  justify-content: center;
+  background-color: #FBFBFB;
+  margin-bottom: 20px;
 }
 
 .info {
-  display: flex;
   flex-direction: column;
+  margin: 15px 0 0 20px;
+}
+
+.info p {
+  margin: 0;
+}
+
+.info-value {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.info-text {
+  font-size: 14px;
+  color: #74798c;
 }

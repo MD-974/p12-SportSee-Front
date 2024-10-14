@@ -45,32 +45,32 @@ function App() {
                   <div className="picture">
                     <img src="./src/assets/Dashboard/fire.svg" alt="" />
                     <div className="info">
-                      <p>Calories</p>
-                      <p>2000 kCal</p>
+                      <p className="info-value">2000 kCal</p>
+                      <p className="info-text">Calories</p>
                     </div>
                   </div>
 
                   <div className="picture">
                     <img src="./src/assets/Dashboard/chicken.svg" alt="" />
                     <div className="info">
-                      <p>Protéines</p>
-                      <p>155 g</p>
+                      <p className="info-value">155 g</p>
+                      <p className="info-text">Protéines</p>
                     </div>
                   </div>
 
                   <div className="picture">
                     <img src="./src/assets/Dashboard/apple.svg" alt="" />
                     <div className="info">
-                      <p>Glucides</p>
-                      <p>290 g</p>
+                      <p className="info-value">290 g</p>
+                      <p className="info-text">Glucides</p>
                     </div>
                   </div>
 
                   <div className="picture">
                     <img src="./src/assets/Dashboard/burger.svg" alt="" />
                     <div className="info">
-                      <p>Lipides</p>
-                      <p>50 g</p>
+                      <p className="info-value">50 g</p>
+                      <p className="info-text">Lipides</p>
                     </div>
                   </div>
                 </div>
