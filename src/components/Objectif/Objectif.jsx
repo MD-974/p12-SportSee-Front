@@ -14,7 +14,7 @@ const Objectif = () => {
       style={{
         width: "200px",
         height: "100%",
-        backgroundColor: "#FBFBFB",
+        backgroundColor: "#fbfbfb",
         borderRadius: "5px",
       }}
     >

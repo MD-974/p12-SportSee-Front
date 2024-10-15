@@ -5,6 +5,7 @@ import {
   PolarAngleAxis,
   ResponsiveContainer,
 } from "recharts"
+import "./Radar.scss"
 
 // Les données pour chaque dimension (intensité, vitesse, force, etc.)
 const data = [
@@ -18,17 +19,7 @@ const data = [
 
 export default function RadarChartDiagram() {
   return (
-    <div
-      className="radar"
-      style={{
-        width: "200px",
-        height: "205px",
-        backgroundColor: "#2A2A2A",
-        padding: "2px",
-        borderRadius: "5px",
-        color: "#FFFFFF",
-      }}
-    >
+    <div className="radar">
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart data={data}>
           <PolarGrid radialLines={false} />

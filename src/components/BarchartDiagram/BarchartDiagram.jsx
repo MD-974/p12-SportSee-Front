@@ -68,33 +68,14 @@ const barsData = [
 
 export default function BarchartDiagram() {
   return (
-    <div
-      className="BarchartDiagram-container"
-      // style={{
-      //   background: "#fbfbfb",
-      //   color: "#FFFFFF",
-      //   padding: "20px 0 20px 30px",
-      //   textAlign: "center",
-      //   fontSize: "14px",
-      //   fontWeight: "500",
-      // }}
-    >
+    <div className="BarchartDiagram-container">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={data}
           margin={{ top: 30, right: 60, left: 20, bottom: 5 }}
           barCategoryGap="10%"
         >
-          <text
-            x={0}
-            y={20}
-            textAnchor="left"
-            style={{
-              fontSize: "15px",
-              fontWeight: 500,
-              fill: "#20253A",
-            }}
-          >
+          <text x={0} y={20} textAnchor="left" className="title-diagram">
             Activité quotidienne
           </text>
 
