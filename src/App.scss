@@ -99,7 +99,7 @@
 section {
   width: 94%;
   padding: 40px 20px 0 40px;
-  // background-color: burlywood;
+  background-color: burlywood;
 }
 
 .diagrams-container, .main-container, .graph-container, .picture {
@@ -136,9 +136,9 @@ section {
   width: 258px;
   height: 124px;
   align-items: center;
-  justify-content: center;
   background-color: #FBFBFB;
   margin-bottom: 20px;
+  padding-left: 40px;
 }
 
 .info {

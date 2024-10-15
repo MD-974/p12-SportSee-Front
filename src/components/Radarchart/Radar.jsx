@@ -25,7 +25,7 @@ export default function RadarChartDiagram() {
           <PolarGrid radialLines={false} />
           <PolarAngleAxis
             dataKey="subject"
-            tick={{ fill: "#FFFFFF", fontSize: 12 }}
+            tick={{ fill: "#FFFFFF", fontSize: 10, fontWeight: 500 }}
           />
           <Radar
             name="Performance"

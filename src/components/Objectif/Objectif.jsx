@@ -22,12 +22,13 @@ const Objectif = () => {
         {/* Graphique circulaire */}
         <PieChart>
           <text
-            x={30}
-            y={50}
+            className="text-score"
+            x={20}
+            y={30}
             textAnchor="left"
             style={{
-              fontSize: "20px",
-              fontWeight: 500,
+              fontSize: "14px",
+              fontWeight: 700,
               fill: "#20253A",
             }}
           >
@@ -56,7 +57,7 @@ const Objectif = () => {
         >
           <h3 style={{ margin: 0, fontSize: "24px" }}>{pourcentage}%</h3>
           <p style={{ margin: 0, fontSize: "14px", color: "#888" }}>
-            de votre objectif
+            de votre <br /> objectif
           </p>
         </div>
       </ResponsiveContainer>
