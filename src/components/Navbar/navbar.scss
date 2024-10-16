@@ -1,33 +1,23 @@
-nav {
+
+.navbar {
     background-color: #020203;
-    
-    .navbar-list {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        list-style-type: none;
-        margin: 0;
-        padding: 20px 30px;
-        
-        .navbar-list-item {
-            color: white;
-            font-size: 24px;
-        }
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     }
+
+.navbar-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 20px 30px;   
 }
-/* Media query for 1024x780 screen size */
-// @media (max-width: px) {
-//     .navbar-list {
-//         padding: 10px;
 
-//         .navbar-list-item {
-//             margin-bottom: 10px;
-//             font-size: 20px;
-//         }
-//     }
+.navbar-list-item {
+    color: #fff;
+    font-size: 24px;
+}
 
-    // nav {
-    //     padding: 10px;
-    // }
-// }
 
