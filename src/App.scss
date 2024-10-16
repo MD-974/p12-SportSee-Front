@@ -19,7 +19,7 @@
 section {
   width: 94%;
   padding: 40px 20px 0 30px;
-  // background-color: burlywood;
+  background-color: burlywood;
 }
 
 .diagrams-container, .main-container, .graph-container, .picture {
@@ -42,6 +42,7 @@ section {
 .graph-container {
   justify-content: space-between;
   gap: 15px;
+  padding-top: 31px;
 }
 
 .sessions-container, .info-container, .objectif-container {
