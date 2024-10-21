@@ -12,7 +12,6 @@ const Objectif = () => {
     <div
       className="objectif"
       style={{
-        width: "200px",
         height: "100%",
         backgroundColor: "#fbfbfb",
         borderRadius: "5px",

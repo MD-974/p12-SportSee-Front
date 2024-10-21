@@ -17,12 +17,12 @@
 }
 
 section {
-  width: 94%;
+  width: 907px;
   padding: 40px 20px 0 30px;
   background-color: burlywood;
 }
 
-.diagrams-container, .main-container, .graph-container, .picture {
+.diagrams-container, .main-container, .picture {
   display: flex;
 }
 
@@ -40,7 +40,8 @@ section {
 }
 
 .graph-container {
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); 
   gap: 15px;
   padding-top: 31px;
 }

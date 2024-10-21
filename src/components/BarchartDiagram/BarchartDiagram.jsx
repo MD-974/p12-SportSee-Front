@@ -89,7 +89,7 @@ export default function BarchartDiagram() {
             dy={10}
             // pour avoir les bars en debut et fin de l'axe(mais enleve le hoover)
             // scale={"point"}
-            padding={{ left: -50, right: -50 }}
+            padding={{ left: -25, right: -25 }}
           />
 
           <YAxis

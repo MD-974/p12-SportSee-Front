@@ -52,7 +52,6 @@ export default function SessionDurationChart() {
     <div
       className="sessions"
       style={{
-        width: "200px",
         height: "205px",
         backgroundColor: "#FF0000",
         padding: "20px",
