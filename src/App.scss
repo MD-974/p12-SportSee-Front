@@ -19,7 +19,7 @@
 section {
   width: 907px;
   padding: 40px 20px 0 30px;
-  background-color: burlywood;
+  // background-color: burlywood;
 }
 
 .diagrams-container, .main-container, .picture {
@@ -41,7 +41,7 @@ section {
 
 .graph-container {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr)); 
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 15px;
   padding-top: 31px;
 }

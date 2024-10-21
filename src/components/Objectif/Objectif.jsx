@@ -2,7 +2,7 @@ import { PieChart, Pie, ResponsiveContainer } from "recharts"
 
 const Objectif = () => {
   // Définir le pourcentage
-  const pourcentage = 50 // Vous pouvez modifier cette valeur pour tester différents pourcentages
+  const pourcentage = 30 // Vous pouvez modifier cette valeur pour tester différents pourcentages
   const data = [
     { value: pourcentage, fill: "#E60000" }, // Rouge pour la progression
     { value: 100 - pourcentage, fill: "#fbfbfb", stroke: "#fbfbfb" }, // Blanc pour la partie restante
@@ -43,6 +43,15 @@ const Objectif = () => {
             innerRadius="60%" // Rayon interne (cercle creux)
             outerRadius="70%" // Rayon externe
             cornerRadius={20} // Arrondir les coins pour les sections
+          ></Pie>
+          <Pie // Cercle blanc à l'intérieur
+            data={[{ value: 100, fill: "#fff" }]}
+            dataKey="value"
+            cx="50%" // Position x du centre du graphique
+            cy="50%" // Position y du centre du graphique
+            innerRadius="0%" // Rayon interne (cercle creux)
+            outerRadius="60%" // Rayon externe
+            stroke="none"
           ></Pie>
         </PieChart>
 
