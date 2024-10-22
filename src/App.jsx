@@ -5,9 +5,22 @@ import Sessionschart from "./components/Sessionschart/Sessionschart"
 import Objectif from "./components/Objectif/Objectif"
 import "./App.scss"
 import RadarChartDiagram from "./components/Radarchart/Radar"
+import { useState, useEffect } from "react"
+
+const id = 12 // ID de l'utilisateur à afficher
 
 function App() {
-  const name = "Karl"
+  // const name = "Karl"
+  const [user, setUser] = useState({})
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const response = await fetch("/userMainData.json")
+      const data = await response.json()
+      setUser(data.find((item) => item.id == id))
+    }
+    fetchUser()
+  }, [])
 
   // Tableau d'objets pour les informations dynamiques
   const nutritionData = [
@@ -41,7 +54,10 @@ function App() {
         <section>
           <div className="title-container">
             <h1 className="title">
-              Bonjour <span className="name-user">{name}</span>
+              Bonjour{" "}
+              <span className="name-user">
+                {user.id && user.userInfos.firstName}
+              </span>
             </h1>
             <p className="subtitle">
               Félicitation ! Vous avez explosé vos objectifs hier 👏
