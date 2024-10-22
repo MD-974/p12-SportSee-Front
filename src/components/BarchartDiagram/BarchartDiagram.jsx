@@ -10,16 +10,16 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts"
-
-const data = [
-  { day: "1", kilogram: 80, calories: 240 },
-  { day: "2", kilogram: 80, calories: 220 },
-  { day: "3", kilogram: 81, calories: 280 },
-  { day: "4", kilogram: 81, calories: 290 },
-  { day: "5", kilogram: 80, calories: 160 },
-  { day: "6", kilogram: 78, calories: 162 },
-  { day: "7", kilogram: 76, calories: 390 },
-]
+// donnees fictives test
+// const data = [
+//   { day: "1", kilogram: 80, calories: 240 },
+//   { day: "2", kilogram: 80, calories: 220 },
+//   { day: "3", kilogram: 81, calories: 280 },
+//   { day: "4", kilogram: 81, calories: 290 },
+//   { day: "5", kilogram: 80, calories: 160 },
+//   { day: "6", kilogram: 78, calories: 162 },
+//   { day: "7", kilogram: 76, calories: 390 },
+// ]
 
 // Composant Tooltip personnalisé
 const CustomTooltip = ({ active, payload }) => {
@@ -66,7 +66,7 @@ const barsData = [
   },
 ]
 
-export default function BarchartDiagram() {
+export default function BarchartDiagram({ data }) {
   return (
     <div className="BarchartDiagram-container">
       <ResponsiveContainer width="100%" height="100%">
@@ -109,25 +109,6 @@ export default function BarchartDiagram() {
           {/* Utilisation du tooltip personnalisé */}
           <Tooltip content={<CustomTooltip />} />
 
-          {/* <Legend
-            iconType="circle"
-            iconSize={10}
-            verticalAlign="top"
-            layout="horizontal"
-            align="right"
-            // decalage sur le haut et la droite des infos legend (poids/calories)
-            wrapperStyle={{ top: 5, marginLeft: "55px" }}
-            // On modifie la couleur du texte pour legend
-            formatter={(value) => {
-              if (value === "poids (kg)") {
-                return <span style={{ color: "#74798C" }}>{value}</span>
-              }
-              if (value === "Calories brûlées (kCal)") {
-                return <span style={{ color: "#74798C" }}>{value}</span>
-              }
-              return <span>{value}</span>
-            }}
-          /> */}
           <Legend
             iconType="circle"
             iconSize={10}
@@ -152,25 +133,6 @@ export default function BarchartDiagram() {
             )}
           />
 
-          {/* <Bar
-            name="poids (kg)"
-            dataKey="kilogram"
-            yAxisId="kilogram"
-            unit="kg"
-            fill="#282D30"
-            radius={[3, 3, 0, 0]}
-            barSize={7}
-          />
-
-          <Bar
-            name="Calories brûlées (kCal)"
-            dataKey="calories"
-            yAxisId="calories"
-            unit="kCal"
-            fill="#E60000"
-            radius={[3, 3, 0, 0]}
-            barSize={7}
-          /> */}
           {barsData.map((bar) => (
             <Bar
               key={bar.dataKey}

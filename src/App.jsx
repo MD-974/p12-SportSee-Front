@@ -12,14 +12,27 @@ const id = 12 // ID de l'utilisateur à afficher
 function App() {
   // const name = "Karl"
   const [user, setUser] = useState({})
+  const [barchartData, setBarchartData] = useState({})
 
   useEffect(() => {
     const fetchUser = async () => {
       const response = await fetch("/userMainData.json")
       const data = await response.json()
-      setUser(data.find((item) => item.id == id))
+      setUser(data.find((item) => item.id === id))
     }
+
+    const fetchUserActivity = async () => {
+      const response = await fetch("/userActivity.json")
+      const data = await response.json()
+      const sessions = data.find((item) => item.userId == id).sessions
+      sessions.forEach((sessions) => {
+        sessions.day = parseInt(sessions.day.split("-")[2])
+      })
+      setBarchartData(sessions)
+    }
+
     fetchUser()
+    fetchUserActivity()
   }, [])
 
   // Tableau d'objets pour les informations dynamiques
@@ -67,7 +80,7 @@ function App() {
           <div className="diagrams-container">
             <div className="progress-container">
               <div className="progress">
-                <BarchartDiagram />
+                <BarchartDiagram data={barchartData} />
               </div>
               <div className="graph-container">
                 <div className="sessions-container">
