@@ -3,31 +3,39 @@ import Navbar from "/src/components/Navbar/Navbar.jsx"
 import BarchartDiagram from "./components/BarchartDiagram/BarchartDiagram"
 import Sessionschart from "./components/Sessionschart/Sessionschart"
 import Objectif from "./components/Objectif/Objectif"
-import "./App.scss"
 import RadarChartDiagram from "./components/Radarchart/Radar"
+import "./App.scss"
 import { useState, useEffect } from "react"
 
-const id = 12 // ID de l'utilisateur à afficher
+const urlParams = new URLSearchParams(document.location.search)
+const id = urlParams.get("id") || 12
+const mock = urlParams.has("mock") ? urlParams.get("mock") === "true" : true
+
+const useMainDataUrl = mock
+  ? "/userMainData.json"
+  : "http://localhost:5173/user/${id}"
+const useActivityUrl = mock
+  ? "/userActivity.json"
+  : "http://localhost:5173/user/${id}/activity"
 
 function App() {
-  // const name = "Karl"
   const [user, setUser] = useState({})
   const [barchartData, setBarchartData] = useState({})
 
   useEffect(() => {
     const fetchUser = async () => {
-      const response = await fetch("/userMainData.json")
+      const response = await fetch(useMainDataUrl)
       const data = await response.json()
       setUser(data.find((item) => item.id === id))
     }
 
     const fetchUserActivity = async () => {
-      const response = await fetch("/userActivity.json")
+      const response = await fetch(useActivityUrl)
       const data = await response.json()
-      const sessions = data.find((item) => item.userId == id).sessions
-      sessions.forEach((sessions) => {
-        sessions.day = parseInt(sessions.day.split("-")[2])
-      })
+      let sessions = data.find((item) => item.userId == id).sessions
+      sessions.forEach(
+        (session) => (session.day = parseInt(session.day.split("-")[2]))
+      )
       setBarchartData(sessions)
     }
 

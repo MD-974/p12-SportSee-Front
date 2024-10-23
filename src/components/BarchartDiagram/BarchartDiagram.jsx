@@ -10,6 +10,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts"
+
 // donnees fictives test
 // const data = [
 //   { day: "1", kilogram: 80, calories: 240 },

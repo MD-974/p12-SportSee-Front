@@ -21,7 +21,11 @@ export default function RadarChartDiagram() {
   return (
     <div className="radar">
       <ResponsiveContainer width="100%" height="100%">
-        <RadarChart data={data}>
+        <RadarChart
+          data={data}
+          outerRadius="90%"
+          margin={{ top: 300, right: 30, bottom: 30, left: 30 }}
+        >
           <PolarGrid radialLines={false} />
           <PolarAngleAxis
             dataKey="subject"
