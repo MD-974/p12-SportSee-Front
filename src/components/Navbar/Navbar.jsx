@@ -7,16 +7,16 @@ export function Navbar() {
           <img src="/src/assets/sportsee-logo.svg" alt="Logo SportSee" />
         </li>
         <li className="navbar-list-item">
-          <a href="/">Accueil</a>
+          <a href="#Accueil">Accueil</a>
         </li>
         <li className="navbar-list-item">
-          <a href="/">Profil</a>
+          <a href="#Profil">Profil</a>
         </li>
         <li className="navbar-list-item">
-          <a href="/">Paramètres</a>
+          <a href="#Paramètres">Paramètres</a>
         </li>
         <li className="navbar-list-item">
-          <a href="/">Communauté</a>
+          <a href="#Communauté">Communauté</a>
         </li>
       </ul>
     </nav>

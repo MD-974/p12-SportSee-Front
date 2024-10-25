@@ -25,6 +25,18 @@
     width: 48px;
     height: 48px;
 } 
+
+.sidebar-logo {
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar-logo:hover {
+    transform: scale(1.1);
+}
+
+
+
+
 .sidebar footer {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
